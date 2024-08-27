@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evening Dashboard</title>
+    <link rel="stylesheet" href="./style_hidden.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></scriptsrc>"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>Dashboard X</h2>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Websites</a></li>
+            <li><a href="#">Tools</a></li>
+        </ul>
+        <div class="user-section">
+            <img src="img/my.jpg" alt="User">
+            <div>
+                <p>Abhishek Yadav</p>
+
+                <p><small>Developer</small></p>
+            </div>
+        </div>
+        <button class="get-template">Pull Requests</button>
+
+        <div class="social-links">
+            <div class="social-icon">
+                <img src="img/git.jpg" alt="GitHub">
+            </div>
+
+            <div class="social-icon">
+                <img src="img/l.png" alt="LinkedIn">
+
+            </div>
+
+            <div class="social-icon">
+                <img src="img/d.jpg" alt="Discord">
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+    <div class="main-content">
+        <header>
+            <h1>Analytics</h1>
+        </header>
+        <section class="cards">
+            <div class="card">
+                <h3><i class="fas fa-shopping-cart"></i> Sales Sites</h3>
+                <p>02</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-warehouse"></i> Build Status</h3>
+                <p>3.6K</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-star"></i> Star Revenue</h3>
+                <p>3.5</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-chart-line"></i> Performance Metrics</h3>
+                <p>1.2k</p>
+            </div>
+        </section>
+        <section class="charts">
+            <div class="chart">
+                <h3>Websites Overview</h3>
+                <canvas id="visitorsChart"></canvas>
+            </div>
+            <div class="chart">
+                <h3>Analytics & Reporting</h3>
+                <canvas id="revenueChart"></canvas>
+            </div>
+        </section>
+
+        <section class="tasks-orders-section">
+            <div class="chart">
+                <h3>Performance Metrics</h3>
+                <canvas id="tasksChart"></canvas>
+            </div>
+            <div class="orders-status">
+                <h3>Team Integration</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>USER</th>
+                            <th>DATE</th>
+                            <th>STATUS</th>
+                            <th>COUNTRY</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#132</td>
+                            <td>Mar 26, 2024</td>
+                            <td><span class="status delivered">Delivered</span></td>
+                            <td>IND</td>
+
+                        </tr>
+                        <tr>
+                            <td>#153</td>
+                            <td>Jun 27, 2024</td>
+                            <td><span class="status canceled">Canceled</span></td>
+                            <td>IND</td>
+
+                        </tr>
+                        <tr>
+                            <td>#133</td>
+                            <td>Jul 02, 2024</td>
+                            <td><span class="status running">Running..</span></td>
+                            <td>IND</td>
+
+                        </tr>
+                        <tr>
+                            <td>#533</td>
+                            <td>Jul 22, 2024</td>
+                            <td><span class="status running">Running..</span></td>
+                            <td>USA</td>
+
+                        </tr>
+                        <tr>
+                            <td>#1233</td>
+                            <td>Aug 13, 2024</td>
+                            <td><span class="status running">Running..</span></td>
+                            <td>IND</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+    </div>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="loginForm">
+                <h2>Join Your GitHub Account</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
